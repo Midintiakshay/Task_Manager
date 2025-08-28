@@ -1,0 +1,103 @@
+# Code Citations
+
+## License: unknown
+https://github.com/levanthieu97/backend-now-deli/tree/cf05aad4cc0f9a6a39cb7e9fa09c264e03d975fa/src/main/java/com/spring/nowdeli/security/SecurityConfig.java
+
+```
+class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Autowired
+    private UserDetailsService userDetailsService;
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(userDetailsService)
+            .passwordEncoder(passwordEncoder());
+    }
+
+    @Override
+```
+
+
+## License: unknown
+https://github.com/icloudland/nuts-security/tree/fed5a7a9f4743833ec2fbe8cf0112632bd5161a0/nuts-security-demo/src/main/java/org/idreamlands/demo/security/DemoSecurityConfig.java
+
+```
+;
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(userDetailsService)
+            .passwordEncoder(passwordEncoder());
+    }
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+```
+
+
+## License: unknown
+https://github.com/taoxia2019/rlzyjx/tree/f836d8c6f3f9f7c9b47fba49919b19f75f5d516d/src/main/java/com/tcrl/security/SpringSecurytyConfig.java
+
+```
+) {
+        return new BCryptPasswordEncoder();
+    }
+
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(userDetailsService)
+            .passwordEncoder(passwordEncoder());
+    }
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+            .csrf().disable
+```
+
+
+## License: unknown
+https://github.com/XiaoYu123456789/rookies_learn/tree/8f0be5c2f9c71d616895ecbd56b59887a69007ab/rookies_learn_security/src/main/java/com/rookies/learn/config/SecurityConfiguration.java
+
+```
+BCryptPasswordEncoder();
+    }
+
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(userDetailsService)
+            .passwordEncoder(passwordEncoder());
+    }
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+            .csrf().disable() //
+```
+
+
+## License: unknown
+https://github.com/aurora-system/falcon/tree/270f21a8cd2cce37440854090a6f77a9295622e0/src/main/java/com/falcon/config/security/simple/SecurityConfig.java
+
+```
+).permitAll()
+                .anyRequest().authenticated()
+            .and()
+                .formLogin()
+                    .loginPage("/login")
+                    .loginProcessingUrl("/login")
+                    .defaultSuccessUrl("/dashboard", true)
+                    .failureUrl("/login?error
+```
+
